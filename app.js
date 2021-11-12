@@ -1,6 +1,5 @@
 import express from 'express';
-import homeRoutes from './src/routes/homeRoutes';
-import matchesRoutes from './src/routes/matchesRoutes';
+import Routes from './src/routes/index';
 
 class App {
   constructor() {
@@ -15,8 +14,10 @@ class App {
   }
 
   routes() {
-    this.app.use('/', homeRoutes);
-    this.app.use('/partidas', matchesRoutes);
+    this.app.use('/', Routes);
+    this.app.use('/partidas', Routes);
+    this.app.use('/estatisticas', Routes);
+    this.app.use('/tabela', Routes);
   }
 }
 
