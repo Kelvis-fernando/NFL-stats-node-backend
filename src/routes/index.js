@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import axios from 'axios';
+import 'dotenv/config';
 
 const router = new Router();
 
@@ -15,7 +16,7 @@ router.get('/partidas', (req, res) => {
 
   axios.get('https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/8', {
     headers: {
-      'Ocp-Apim-Subscription-Key': 'c00c2adab1cb4775965c58a43cb3e5f5',
+      'Ocp-Apim-Subscription-Key': process.env.SECRET_API_KEY,
     },
   })
     .then((resp) => {
