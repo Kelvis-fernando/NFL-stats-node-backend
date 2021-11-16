@@ -14,7 +14,7 @@ router.get('/partidas', (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
   res.setHeader('Access-Control-Allow-Credentials', true); // If needed
 
-  axios.get('https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/8', {
+  axios.get('https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/10', {
     headers: {
       'Ocp-Apim-Subscription-Key': process.env.SECRET_API_KEY,
     },

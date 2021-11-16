@@ -1,9 +1,7 @@
 import express from 'express';
 
-class Controller {
-  constructor() {
-    this.app = express();
-  }
+function HomeController() {
+
 }
 
-export default new Controller().app;
+export default HomeController();
