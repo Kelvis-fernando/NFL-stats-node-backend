@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import Routes from './src/routes/index';
 
 class App {
@@ -6,6 +7,7 @@ class App {
     this.app = express();
     this.middlewares();
     this.routes();
+    this.app.use(cors({ origin: 'http://localhost:8888' }));
   }
 
   middlewares() {

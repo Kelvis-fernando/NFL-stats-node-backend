@@ -8,6 +8,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/partidas', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+  res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+
   axios.get('https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/8', {
     headers: {
       'Ocp-Apim-Subscription-Key': 'c00c2adab1cb4775965c58a43cb3e5f5',
