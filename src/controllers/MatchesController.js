@@ -22,7 +22,8 @@ class HomeController {
             Team: el.Team,
             TeamName: el.TeamName,
             Opponent: el.Opponent,
-            Score: el.Score,
+            Score: el.ScoreQuarter1 + el.ScoreQuarter2 + el.ScoreQuarter3 + el.ScoreQuarter4,
+            ScoreOpponent: el.OpponentScoreQuarter1 + el.OpponentScoreQuarter2 + el.OpponentScoreQuarter3 + el.OpponentScoreQuarter4,
           });
         });
         res.send(returData);
