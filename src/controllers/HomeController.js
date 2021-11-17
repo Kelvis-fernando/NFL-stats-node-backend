@@ -1,7 +1,7 @@
-import express from 'express';
-
-function HomeController() {
-
+class HomeController {
+  index(req, res) {
+    res.send('Home');
+  }
 }
 
-export default HomeController();
+export default new HomeController();

@@ -1,38 +1,17 @@
 import { Router } from 'express';
-import axios from 'axios';
-import 'dotenv/config';
+import matchesController from '../controllers/MatchesController';
+import homeController from '../controllers/HomeController';
+import statsController from '../controllers/StatsController';
+import tableController from '../controllers/TableController';
 
 const router = new Router();
 
-router.get('/', (req, res) => {
-  res.send('Home');
-});
+router.get('/', homeController.index);
 
-router.get('/partidas', (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
-  res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+router.get('/partidas', matchesController.index);
 
-  axios.get('https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/10', {
-    headers: {
-      'Ocp-Apim-Subscription-Key': process.env.SECRET_API_KEY,
-    },
-  })
-    .then((resp) => {
-      res.send(resp.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+router.get('/estatisticas', statsController.index);
 
-router.get('/estatisticas', (req, res) => {
-  res.send('estatisticas');
-});
-
-router.get('/tabela', (req, res) => {
-  res.send('tabela');
-});
+router.get('/tabela', tableController.index);
 
 export default router;
