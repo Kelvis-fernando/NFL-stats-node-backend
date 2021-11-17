@@ -14,7 +14,18 @@ class HomeController {
       },
     })
       .then((resp) => {
-        res.send(resp.data);
+        const returData = [];
+        resp.data.forEach((el) => {
+          returData.push({
+            Date: el.Date,
+            Week: el.Week,
+            Team: el.Team,
+            TeamName: el.TeamName,
+            Opponent: el.Opponent,
+            Score: el.Score,
+          });
+        });
+        res.send(returData);
       })
       .catch((err) => {
         console.log(err);
