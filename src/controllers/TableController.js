@@ -17,6 +17,8 @@ class TableController {
         const table = [];
         const AFC = [];
         const NFC = [];
+        const AFCTABLE = {AFC: AFC};
+        const NFCTABLE = {NFC: NFC};
         response.data.forEach((el) => {
           if (el.Conference === 'NFC') {
             NFC.push({
@@ -38,7 +40,7 @@ class TableController {
             });
           }
         });
-        table.push(AFC, NFC);
+        table.push(AFCTABLE, NFCTABLE);
         res.send(table);
       })
       .catch((error) => {
