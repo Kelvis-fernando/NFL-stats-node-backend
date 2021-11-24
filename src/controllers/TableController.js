@@ -15,16 +15,30 @@ class TableController {
     })
       .then((response) => {
         const table = [];
+        const AFC = [];
+        const NFC = [];
         response.data.forEach((el) => {
-          table.push({
-            Name: el.Name,
-            Conference: el.Conference,
-            Division: el.Division,
-            Wins: el.Wins,
-            Losses: el.Losses,
-            Ties: el.Ties,
-          });
+          if (el.Conference === 'NFC') {
+            NFC.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          } else if (el.Conference === 'AFC') {
+            AFC.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          }
         });
+        table.push(AFC, NFC);
         res.send(table);
       })
       .catch((error) => {
