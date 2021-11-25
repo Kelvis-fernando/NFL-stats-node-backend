@@ -14,5 +14,6 @@ module.exports = {
     'no-console': 'off',
     'class-methods-use-this': 'off',
     'max-len': 'off',
+    'object-shorthand': 'off',
   },
 };

@@ -15,13 +15,37 @@ class TableController {
     })
       .then((response) => {
         const table = [];
-        const AFC = [];
-        const NFC = [];
-        const AFCTABLE = {AFC: AFC};
-        const NFCTABLE = {NFC: NFC};
+
+        const nfcStage = [];
+        const afcStage = [];
+
+        const afcEast = [];
+        const afcWest = [];
+        const afcSouth = [];
+        const afcNorth = [];
+        const AFC = [[{
+          North: afcNorth,
+          East: afcEast,
+          South: afcSouth,
+          West: afcWest,
+        }]];
+
+        const nfcEast = [];
+        const nfcWest = [];
+        const nfcSouth = [];
+        const nfcNorth = [];
+        const NFC = [{
+          North: nfcNorth,
+          East: nfcEast,
+          South: nfcSouth,
+          West: nfcWest,
+        }];
+
+        const AFCTABLE = { AFC: AFC };
+        const NFCTABLE = { NFC: NFC };
         response.data.forEach((el) => {
           if (el.Conference === 'NFC') {
-            NFC.push({
+            nfcStage.push({
               Name: el.Name,
               Conference: el.Conference,
               Division: el.Division,
@@ -30,7 +54,7 @@ class TableController {
               Ties: el.Ties,
             });
           } else if (el.Conference === 'AFC') {
-            AFC.push({
+            afcStage.push({
               Name: el.Name,
               Conference: el.Conference,
               Division: el.Division,
@@ -40,6 +64,87 @@ class TableController {
             });
           }
         });
+
+        nfcStage.forEach((el) => {
+          if (el.Division === 'East') {
+            nfcEast.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          } else if (el.Division === 'North') {
+            nfcNorth.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          } else if (el.Division === 'South') {
+            nfcSouth.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          } else if (el.Division === 'West') {
+            nfcWest.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          }
+        });
+
+        afcStage.forEach((el) => {
+          if (el.Division === 'East') {
+            afcEast.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          } else if (el.Division === 'North') {
+            afcNorth.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          } else if (el.Division === 'South') {
+            afcSouth.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          } else if (el.Division === 'West') {
+            afcWest.push({
+              Name: el.Name,
+              Conference: el.Conference,
+              Division: el.Division,
+              Wins: el.Wins,
+              Losses: el.Losses,
+              Ties: el.Ties,
+            });
+          }
+        });
+
         table.push(AFCTABLE, NFCTABLE);
         res.send(table);
       })
