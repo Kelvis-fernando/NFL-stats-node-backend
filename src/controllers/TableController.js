@@ -23,23 +23,23 @@ class TableController {
         const afcWest = [];
         const afcSouth = [];
         const afcNorth = [];
-        const AFC = [[{
+        const AFC = {
           North: afcNorth,
           East: afcEast,
           South: afcSouth,
           West: afcWest,
-        }]];
+        };
 
         const nfcEast = [];
         const nfcWest = [];
         const nfcSouth = [];
         const nfcNorth = [];
-        const NFC = [{
+        const NFC = {
           North: nfcNorth,
           East: nfcEast,
           South: nfcSouth,
           West: nfcWest,
-        }];
+        };
 
         const AFCTABLE = { AFC: AFC };
         const NFCTABLE = { NFC: NFC };
