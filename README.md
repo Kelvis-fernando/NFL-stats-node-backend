@@ -37,13 +37,13 @@ Logo após baixar o projeto na sua maquina, é necessario fazer o download das d
 API KEY:
 
 ```
-Após isso, precisa ter acesso a API KEY e adicionar ao seu arquivo .env, e para isso é muito simples, apenas crie uma conta no site da https://sportsdata.io/developers/api-documentation/nfl, e tento acesso a sua api key, apenas adicionar ao seu  .env
+Após isso, precisa ter acesso a API KEY e adicionar ao seu arquivo .env, e para isso é muito simples, apenas crie uma conta no site da https://sportsdata.io/developers/api-documentation/nfl, e tendo acesso a sua api key, apenas adicionar ao seu .env
 ```
 
 Tendo tudo isso feito, agora você só precisa consumir o end point, eles são:
-/times
-/estatisticas
-/tabela
+# /times
+# /estatisticas
+# /tabela
 
 ## 🎁 Expressões de gratidão
 
