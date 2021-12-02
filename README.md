@@ -41,9 +41,9 @@ Após isso, precisa ter acesso a API KEY e adicionar ao seu arquivo .env, e para
 ```
 
 Tendo tudo isso feito, agora você só precisa consumir o end point, eles são:
-# /times
-# /estatisticas
-# /tabela
+## /times
+## /estatisticas
+## /tabela
 
 ## 🎁 Expressões de gratidão
 
