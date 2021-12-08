@@ -2,6 +2,15 @@
 
 API REST criada com os dados de times, jogadores e partidas da NFL para consumo de aplicações Front-end e Mobile. Criado com Node.js e Express usando a arquitetura MVC.
 
+## 📦 Desenvolvimento
+
+Para o desenvolvimento desta API eu utilizei as tecnologias:
+<div style="display: inline_block"><br>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="50" align="center"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" height="40" width="50" align="center"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" width="50" align="center"/>
+</div>
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento.
@@ -18,82 +27,28 @@ Node.js, Visual studio code, Git e GitHub
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+A primeira coisa que você ira fazer é clonar o repositorio na sua maquina, é preciso fazer o git clone <link do repositorio>
 
-Diga como essa etapa será:
-
-```
-Dar exemplos
-```
-
-E repita:
 
 ```
-Até finalizar
+Logo após baixar o projeto na sua maquina, é necessario fazer o download das dependencias com o npm i
 ```
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
+API KEY:
 
 ```
-Dar exemplos
+Após isso, precisa ter acesso a API KEY e adicionar ao seu arquivo .env, e para isso é muito simples, apenas crie uma conta no site da https://sportsdata.io/developers/api-documentation/nfl, e tendo acesso a sua api key, apenas adicionar ao seu .env
 ```
 
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Desenvolvimento
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
-## 🛠️ Construído com
-
-Mencione as ferramentas que você usou para criar seu projeto
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+Tendo tudo isso feito, agora você só precisa consumir o end point, eles são:
+## /times
+## /estatisticas
+## /tabela
 
 ## 🎁 Expressões de gratidão
 
-* Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺 
-* Obrigado publicamente 🤓.
-* etc.
-
+* Este projeto foi apenas uma forma de estudo misturado com uma paixão minha que é o futebol americano e a NFL, pq não misturar  o util com o agradavel?!😊📢
+* Obrigado 🤓.
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ com ❤️ por [Kelvis Fernando](https://github.com/Kelvis-fernando/) 😊
