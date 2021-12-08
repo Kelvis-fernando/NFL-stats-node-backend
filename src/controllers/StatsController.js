@@ -8,9 +8,29 @@ class StatsController {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
     res.setHeader('Access-Control-Allow-Credentials', true); // If needed
 
-    axios.get('https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/11', {
+    let currentlyWeekAndSeason = {};
+
+    axios.get('https://api.sportsdata.io/v3/nfl/scores/json/CurrentWeek', {
       headers: {
         'Ocp-Apim-Subscription-Key': process.env.SECRET_API_KEY,
+      },
+    })
+      .then((week) => {
+        console.log(week.data);
+        currentlyWeekAndSeason = { Week: week.data };
+        const baseUrl = `https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/${currentlyWeekAndSeason.Week}`;
+        console.log(baseUrl);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    const baseUrl = `https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/${currentlyWeekAndSeason.Week}`;
+
+    axios.get(baseUrl, {
+      headers: {
+        'Ocp-Apim-Subscription-Key': process.env.SECRET_API_KEY,
+        'Content-Type': 'application / json',
       },
     })
       .then((response) => {

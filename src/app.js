@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import Routes from './src/routes/index';
+import Routes from './routes/index';
 
 class App {
   constructor() {
