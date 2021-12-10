@@ -25,7 +25,7 @@ class StatsController {
         console.log(error);
       });
 
-    const baseUrl = `https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/${currentlyWeekAndSeason.Week}`;
+    const baseUrl = 'https://api.sportsdata.io/v3/nfl/scores/json/TeamGameStats/2021/13';
 
     axios.get(baseUrl, {
       headers: {
